@@ -1,1 +1,1 @@
-include ':sample', ':locationforeground'
+include ':sample', ':lib'

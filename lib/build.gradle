@@ -52,16 +52,15 @@ ext {
     bintrayRepo = 'com.shohiebsense.loclib'
     bintrayName = 'FusedLocationBackground'
 
-    publishedGroupId = 'com.shohiebsense.loclib'
-    libraryName = 'FusedLocationBackground'
-    artifact = 'fusedlocationbackground'
+    publishedGroupId = 'com.shohiebsense'
+    libraryName = 'LocationForeground'
+    artifact = 'locationforeground'
 
     libraryDescription = 'Running Location on background'
+    siteUrl = 'https://github.com/shohiebsense/FusedLocationForeground'
+    gitUrl = 'https://github.com/shohiebsense/FusedLocationForeground.git'
 
-    siteUrl = 'https://github.com/shohiebsense/FusedLocationBackground'
-    gitUrl = 'https://github.com/shohiebsense/FusedLocationBackground.git'
-
-    libraryVersion = '1.0.5'
+    libraryVersion = '0.9.1'
 
     developerId = 'shohiebsense'
     developerName = 'Shohieb Ahmad Nasruddin'
