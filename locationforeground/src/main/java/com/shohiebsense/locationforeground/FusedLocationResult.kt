@@ -1,4 +1,4 @@
-package com.shohiebsense.loclib
+package com.shohiebsense.locationforeground
 
 import android.content.Context
 import com.shohiebsense.locationforeground.PreferenceManager

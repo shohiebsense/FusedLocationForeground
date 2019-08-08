@@ -8,13 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.shohiebsense.locationforeground.LocationRequestHelper
 import com.shohiebsense.locationforeground.LocationResultObservable
-import com.shohiebsense.loclib.FusedLocationResult
+import com.shohiebsense.locationforeground.FusedLocationResult
 import java.util.*
 import android.content.Intent
-import androidx.core.content.ContextCompat.startForegroundService
-import android.os.Build
 import android.os.Handler
 
 
