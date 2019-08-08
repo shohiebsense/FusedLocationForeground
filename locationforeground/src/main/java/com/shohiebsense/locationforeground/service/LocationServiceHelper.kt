@@ -47,10 +47,6 @@ class LocationServiceHelper(
         LocationResultObservable.instance.addObserver(this)
     }
 
-    fun setAppName(appName: String) : LocationServiceHelper{
-        LocationService.APP_NAME = appName
-        return this
-    }
 
     fun doRequestLocationPermission(permissions: List<String>) {
         ActivityCompat.requestPermissions(

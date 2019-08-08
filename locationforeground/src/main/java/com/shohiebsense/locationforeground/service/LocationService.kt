@@ -26,7 +26,6 @@ class LocationService : Service() {
         val UPDATE_INTERVAL_IN_MS = 10000L
         val FASTEST_UPDATE_INTERVAL_IN_MS = UPDATE_INTERVAL_IN_MS / 2
         val KEY_NOTIFICATION_ID = 12345678
-        var APP_NAME = ""
         val INTENT_NOTIFICATION_CHANNEL_ID = "channel_01"
         val INTENT_KEY_IS_STARTED_FROM_NOTIFICATION = "$PACKAGE_NAME.IS_STARTED_FROM_NOTIFICATION"
         val INTENT_NOTIFICATION_REQUEST_CODE = 0
@@ -63,7 +62,7 @@ class LocationService : Service() {
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val mChannel = NotificationChannel(INTENT_NOTIFICATION_CHANNEL_ID, APP_NAME, NotificationManager.IMPORTANCE_LOW)
+            val mChannel = NotificationChannel(INTENT_NOTIFICATION_CHANNEL_ID, getAppName(), NotificationManager.IMPORTANCE_LOW)
             mChannel.enableVibration(false)
             notificationManager.createNotificationChannel(mChannel)
         }
@@ -89,15 +88,12 @@ class LocationService : Service() {
 
     }
 
-
-
     fun createLocationRequest(){
         mLocationRequest = LocationRequest()
         mLocationRequest!!.setInterval(UPDATE_INTERVAL_IN_MS)
         mLocationRequest!!.setFastestInterval(FASTEST_UPDATE_INTERVAL_IN_MS)
         mLocationRequest!!.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
     }
-
 
     @SuppressLint("MissingPermission")
     fun requestLocationUpdates(){

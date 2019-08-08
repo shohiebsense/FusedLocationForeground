@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(),LocationServiceHelper.LocationServiceLi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        locationServiceHelper = LocationServiceHelper(this, this).setAppName("shohiebsense")
+        locationServiceHelper = LocationServiceHelper(this, this)
     }
 
     override fun onStart() {
